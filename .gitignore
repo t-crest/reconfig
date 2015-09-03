@@ -1,0 +1,12 @@
+*~
+tmp/
+
+# Ignore LaTeX temp files
+doc/**/*.aux
+doc/**/*.toc
+doc/**/*.bbl
+doc/**/*.blg
+doc/**/*.lof
+doc/**/*.lot
+doc/**/*.lol
+doc/**/*.synctex.gz
