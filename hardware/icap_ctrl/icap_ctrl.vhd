@@ -83,6 +83,9 @@ begin
 
 	SResp_next <= OCP_RESP_DVA when (sresp_dva_mux = '1' or sresp_dva_fsm = '1') else OCP_RESP_NULL;--this is controlled by both the ocp mux and the fsm (OR)
 
+	ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
+	ram_addr(1 downto 0) <= (others => '0');
+		
 	--Control mux
 	OCP_RW_PROC : process(config_m.MCmd, config_m.MAddr, config_m.MData, status)
 	begin
@@ -138,8 +141,12 @@ begin
 					when 0 =>
 						--Read STATUS register
 						SData_next(STATUS_WIDTH - 1 downto 0) <= status;
-					--when 7 =>
-						--SData_next <= X"01234567"; -- this is for debug purposes (to be removed)
+					when 5 =>
+						SData_next <= X"01234567"; -- this is for debug purposes (to be removed)
+					when 6 =>
+						SData_next <= X"89ABCDEF"; -- this is for debug purposes (to be removed)
+					when 7 =>
+						SData_next <= X"AABBCCDD"; -- this is for debug purposes (to be removed)
 					when others =>
 				--do nothing
 				end case;
@@ -150,12 +157,11 @@ begin
 	end process;
 
 	--Control FSM		
-	Control_FSM_PROC : process(STATE_reg, CNT_reg, RUN_CNT_reg, RAM_ADDR_reg, abort, icap_BUSY, icap_O(7 downto 4), ram_data_i, start_cpu_stream, start_ram_stream, CPU_stream_flag, CPU_stream_reg)
+	Control_FSM_PROC : process(STATE_reg, CNT_reg, RUN_CNT_reg, abort, icap_BUSY, icap_O(7 downto 4), ram_data_i, start_cpu_stream, start_ram_stream, CPU_stream_flag, CPU_stream_reg)
 	begin
 		STATE_next  <= STATE_reg;
 		ctrl_status <= ND_STATUS;
-		
-		ram_addr <= (others => '0');
+
 		ram_re <= '0';
 		
 		RAM_ADDR_up <= '0';
@@ -208,7 +214,7 @@ begin
 					
 			when RAM_STREAM_0 => --first step, never repeats
 				ctrl_status <= WRITE_IN_PROGRESS_STATUS;
-				ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
+				--ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
 				ram_re <= '1';
 				RAM_ADDR_up <= '1';
 				CNT_down <= '1';
@@ -220,7 +226,7 @@ begin
 								
 			when RAM_STREAM_1 => --read ram
 				ctrl_status <= WRITE_IN_PROGRESS_STATUS;
-				ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
+				--ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
 				if ram_data_i = ESCAPE then
 					ram_re <= '1';
 					--icap_I <= ram_data_i;
@@ -249,11 +255,11 @@ begin
 				
 			when RAM_STREAM_2 => --read ram
 				ctrl_status <= WRITE_IN_PROGRESS_STATUS;
-				ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
+				--ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
 				ram_re <= '1';
-				RAM_ADDR_up <= '1';
 				CNT_down <= '1';
 				if ram_data_i = ESCAPE then --it was a double escape
+					RAM_ADDR_up <= '1';
 					icap_I <= ram_data_i;
 					icap_CE <= '0';
 					if abort = '1' then
@@ -264,6 +270,7 @@ begin
 						STATE_next  <= RAM_STREAM_1;
 					end if;
 				else --I found a compressed run
+					RAM_ADDR_up <= '0';-- added to correct a bug (test)
 					RUN_CNT_load <= '1';
 					if abort = '1' then
 						STATE_next <= CONFIG_ABORT;
@@ -276,9 +283,10 @@ begin
 				
 			when RAM_STREAM_3 => --read ram
 				ctrl_status <= WRITE_IN_PROGRESS_STATUS;
-				ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
+				--ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
 				icap_I <= ram_data_i;
-				if (to_integer(unsigned(RUN_CNT_reg)) = 0) then --it is the end, load the next
+				icap_CE <= '0';
+				if (to_integer(unsigned(RUN_CNT_reg)) = 2) then --it is the end, load the next (n.b leghts of less than 2 are not ammitted)
 					ram_re <= '1';
 					RAM_ADDR_up <= '1';
 					CNT_down <= '1';
@@ -290,12 +298,12 @@ begin
 						STATE_next  <= RAM_STREAM_1;
 					end if;
 				else --de-compressing a run
-					icap_CE <= '0';
+					--icap_CE <= '0';
 					RUN_CNT_down <= '1';
 					if abort = '1' then
 						STATE_next <= CONFIG_ABORT;
 					end if;
-				end if;					
+				end if;		
 
 			when CPU_STREAM_WAIT =>
 				ctrl_status <= WAIT_BUSY_ICAP_STATUS;
