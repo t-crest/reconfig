@@ -523,10 +523,10 @@ begin
   		if reset = '1' then
   			CPU_stream_flag <= '0';
   		else
-  			if sw_reset = '1' or CPU_stream_flag_clear = '1' then
-  				CPU_stream_flag <= '0';
-  			elsif new_cpu_stream = '1' then
+	  		if new_cpu_stream = '1' then
   				CPU_stream_flag <= '1';
+  			elsif sw_reset = '1' or CPU_stream_flag_clear = '1' then
+  				CPU_stream_flag <= '0';
   			end if;
   		end if;
   	end if;
