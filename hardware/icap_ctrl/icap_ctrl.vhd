@@ -142,11 +142,11 @@ begin
 						--Read STATUS register
 						SData_next(STATUS_WIDTH - 1 downto 0) <= status;
 					when 5 =>
-						SData_next <= X"01234567"; -- this is for debug purposes (to be removed)
+						--SData_next <= X"01234567"; -- this is for debug purposes (to be removed)
 					when 6 =>
-						SData_next <= X"89ABCDEF"; -- this is for debug purposes (to be removed)
+						--SData_next <= X"89ABCDEF"; -- this is for debug purposes (to be removed)
 					when 7 =>
-						SData_next <= X"AABBCCDD"; -- this is for debug purposes (to be removed)
+						SData_next <= X"AABBCCDD"; -- controller signature
 					when others =>
 				--do nothing
 				end case;
@@ -369,7 +369,7 @@ begin
 			when CPU_STREAM_4 => --read ram
 				ctrl_status <= WRITE_IN_PROGRESS_STATUS;
 				sresp_dva_fsm <= '1';
-				if ram_data_i = ESCAPE then --it was a double escape
+				if CPU_stream_reg = ESCAPE then --it was a double escape
 					icap_I <= CPU_stream_reg;
 					icap_CE <= '0';
 					if abort = '1' then

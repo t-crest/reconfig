@@ -47,11 +47,13 @@ package icap_ctrl_config is
 	constant REG_TABLE_ADDR_WIDTH       : natural := 3;
 
 	--this is the bit size of the maximum lenght of a bit-file
-	constant CNT_WIDTH     : natural := 14;--in words
+	--constant CNT_WIDTH     : natural := 14;--in words
+	constant CNT_WIDTH     : natural := 16;--in words
 	
 	constant RUN_CNT_WIDTH     : natural := 8;
 	
-	constant RAM_ADDR_WIDTH       : natural := 16;--bytes based addr
+	--constant RAM_ADDR_WIDTH       : natural := 16;--bytes based addr
+	constant RAM_ADDR_WIDTH       : natural := 18;--bytes based addr
 	
 	--type icap_width_type is (SPARTAN3A, SPARTAN6, VIRTEX4, VIRTEX5, VIRTEX6);
 	

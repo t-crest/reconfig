@@ -314,7 +314,8 @@ int wcet_bram_8(unsigned char array[], unsigned int array_length){
 				i++; //skip one round
 			}else{
 				wcet=wcet+2*BRAM_R_W_PENALTY;// I need to red the escape
-				wcet=wcet+(array[i+1]+1)*BRAM_R_W_PENALTY;
+				//wcet=wcet+(array[i+1]+1)*BRAM_R_W_PENALTY;
+				wcet=wcet+(array[i+1])*BRAM_R_W_PENALTY;
 				i++;
 				i++; //skip two rounds 
 			}
@@ -340,7 +341,8 @@ int wcet_bram_16(unsigned short array[], unsigned int array_length){
 				i++; //skip one round
 			}else{
 				wcet=wcet+2*BRAM_R_W_PENALTY;// I need to red the escape
-				wcet=wcet+(array[i+1]+1)*BRAM_R_W_PENALTY;
+				//wcet=wcet+(array[i+1]+1)*BRAM_R_W_PENALTY;
+				wcet=wcet+(array[i+1])*BRAM_R_W_PENALTY;
 				i++;
 				i++; //skip two rounds 
 			}
@@ -357,16 +359,18 @@ int wcet_bram_32(unsigned int array[], unsigned int array_length){
 
 	wcet=wcet+BRAM_INITIAL_PENALTY+BRAM_FINAL_PENALTY+RECONFIGURATION_PENALTY;
 
-	for (int i=0; i<array_length-2; i++){//the last cannot be an escape
+	for (int i=0; i<array_length; i++){//the last cannot be an escape
 		if (array[i] != escape){
 			wcet=wcet+BRAM_R_W_PENALTY;
 		}else{
-			if (array[i+1] == escape ){
+			if (array[i+1] == escape){
 				wcet=wcet+2*BRAM_R_W_PENALTY;// in need to read the two caracters (one will not be used)
-				i++; //skip one round
+				//printf("Double escape.\n");
+				i = i + 1; //skip one round
 			}else{
 				wcet=wcet+2*BRAM_R_W_PENALTY;// I need to red the escape and the count
-				wcet=wcet+(array[i+1]+1)*BRAM_R_W_PENALTY;
+				//wcet=wcet+(array[i+1]+1)*BRAM_R_W_PENALTY;
+				wcet=wcet+(array[i+1])*BRAM_R_W_PENALTY;
 				i++;
 				i++; //skip two rounds 
 			}
@@ -541,12 +545,12 @@ int lre_8(unsigned char array[], unsigned int * array_length){
 				}
 			}else if(symbols_occ_8[j]<=symbols_occ_limit){
 				array[i]=escape;
-				array[i+1]=symbols_occ_8[j]-1;
+				array[i+1]=symbols_occ_8[j];
 				array[i+2]=symbols_8[j];
 				i=i+3;
 			}else{
 				array[i]=escape;
-				array[i+1]=symbols_occ_limit-1;
+				array[i+1]=symbols_occ_limit;
 				array[i+2]=symbols_8[j];
 				i=i+3;
 				symbols_occ_8[j]=symbols_occ_8[j]-symbols_occ_limit;
@@ -648,12 +652,12 @@ int lre_16(unsigned short array[], unsigned int * array_length){
 				}
 			}else if(symbols_occ_16[j]<=symbols_occ_limit){
 				array[i]=escape;
-				array[i+1]=symbols_occ_16[j]-1;
+				array[i+1]=symbols_occ_16[j];
 				array[i+2]=symbols_16[j];
 				i=i+3;
 			}else{
 				array[i]=escape;
-				array[i+1]=symbols_occ_limit-1;
+				array[i+1]=symbols_occ_limit;
 				array[i+2]=symbols_16[j];
 				i=i+3;
 				symbols_occ_16[j]=symbols_occ_16[j]-symbols_occ_limit;
@@ -755,12 +759,12 @@ int lre_32(unsigned int array[], unsigned int * array_length){
 				}
 			}else if(symbols_occ_32[j]<=symbols_occ_limit){
 				array[i]=escape;
-				array[i+1]=symbols_occ_32[j]-1;
+				array[i+1]=symbols_occ_32[j];
 				array[i+2]=symbols_32[j];
 				i=i+3;
 			}else{
 				array[i]=escape;
-				array[i+1]=symbols_occ_limit-1;
+				array[i+1]=symbols_occ_limit;
 				array[i+2]=symbols_32[j];
 				i=i+3;
 				symbols_occ_32[j]=symbols_occ_32[j]-symbols_occ_limit;
