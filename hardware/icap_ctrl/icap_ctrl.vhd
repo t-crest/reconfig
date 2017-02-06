@@ -53,7 +53,7 @@ architecture rtl of icap_ctrl is
 	
 	signal sw_reset, abort, start_cpu_stream, start_ram_stream : std_logic;
 	
-	type state_type is (READY, READY_AND_DONE, READY_AND_FAIL, RAM_STREAM_0, RAM_STREAM_1, RAM_STREAM_2, RAM_STREAM_3, WAIT_END, RAM_STREAM_WAIT, CONFIG_ABORT, CPU_STREAM_WAIT, CPU_STREAM_0, CPU_STREAM_1, CPU_STREAM_2, CPU_STREAM_3, CPU_STREAM_4, CPU_STREAM_5, CPU_STREAM_6);
+	type state_type is (READY, READY_AND_DONE, READY_AND_FAIL, RAM_STREAM_0, RAM_STREAM_1, RAM_STREAM_2, RAM_STREAM_3, WAIT_END, WAIT_ICAP_END, RAM_STREAM_WAIT, CONFIG_ABORT, CPU_STREAM_WAIT, CPU_STREAM_0, CPU_STREAM_1, CPU_STREAM_2, CPU_STREAM_3, CPU_STREAM_4, CPU_STREAM_5, CPU_STREAM_6);
 	signal STATE_reg, STATE_next : state_type;
 	
 	signal SResp_next : std_logic_vector(OCP_RESP_WIDTH-1 downto 0);
@@ -74,7 +74,7 @@ begin
 
 	icap_CLK <= clk;
 	
-	--Just passing the status from the ICAP O
+	-- Passing the status from the ICAP O
 	icap_status(ICAP_CFG_ERR_BIT) <= icap_O(7);
 	icap_status(ICAP_DATA_SYNC_BIT) <= icap_O(6);
 	icap_status(ICAP_READ_I_P_BIT) <= icap_O(5);
@@ -257,9 +257,10 @@ begin
 				ctrl_status <= WRITE_IN_PROGRESS_STATUS;
 				--ram_addr(RAM_ADDR_WIDTH-1 downto 2) <= RAM_ADDR_reg;
 				ram_re <= '1';
-				CNT_down <= '1';
+				--CNT_down <= '1'; -- lenght fix
 				if ram_data_i = ESCAPE then --it was a double escape
 					RAM_ADDR_up <= '1';
+					CNT_down <= '1';
 					icap_I <= ram_data_i;
 					icap_CE <= '0';
 					if abort = '1' then
@@ -274,8 +275,8 @@ begin
 					RUN_CNT_load <= '1';
 					if abort = '1' then
 						STATE_next <= CONFIG_ABORT;
-					elsif (to_integer(unsigned(CNT_reg)) = 0) then
-						STATE_next  <= WAIT_END;
+					--elsif (to_integer(unsigned(CNT_reg)) = 0) then
+					--	STATE_next  <= WAIT_END;
 					else
 						STATE_next <= RAM_STREAM_3;
 					end if;
@@ -287,14 +288,17 @@ begin
 				icap_I <= ram_data_i;
 				icap_CE <= '0';
 				if (to_integer(unsigned(RUN_CNT_reg)) = 2) then --it is the end, load the next (n.b leghts of less than 2 are not ammitted)
-					ram_re <= '1';
-					RAM_ADDR_up <= '1';
-					CNT_down <= '1';
+					--ram_re <= '1';
+					--RAM_ADDR_up <= '1';
+					--CNT_down <= '1';
 					if abort = '1' then
 						STATE_next <= CONFIG_ABORT;
 					elsif (to_integer(unsigned(CNT_reg)) = 0) then
 						STATE_next  <= WAIT_END;
 					else
+						ram_re <= '1';
+						RAM_ADDR_up <= '1';
+						CNT_down <= '1';
 						STATE_next  <= RAM_STREAM_1;
 					end if;
 				else --de-compressing a run
@@ -421,8 +425,16 @@ begin
 				end if;					
 			
 			when WAIT_END =>
-				ctrl_status <= WAIT_END_STATUS;
+				ctrl_status <= WRITE_IN_PROGRESS_STATUS;
 				icap_CE <= '0';
+				if abort = '1' then
+					STATE_next <= CONFIG_ABORT;
+				else
+					STATE_next  <= WAIT_ICAP_END;
+				end if;
+				
+			when WAIT_ICAP_END =>
+				ctrl_status <= WAIT_END_STATUS;
 				if abort = '1' then
 					STATE_next <= CONFIG_ABORT;
 				elsif (icap_O(7 downto 4)=x"9") then --the configuration is terminated
@@ -430,6 +442,7 @@ begin
 				elsif (icap_O(7 downto 4)=x"5" or icap_O(7 downto 4)=x"1") then
 					STATE_next  <= READY_AND_FAIL;
 				end if;
+			
 				
 			when CONFIG_ABORT =>
 				ctrl_status <= ABORT_IN_PROGRESS_STATUS;
