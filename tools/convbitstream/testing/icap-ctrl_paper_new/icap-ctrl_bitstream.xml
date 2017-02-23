@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bitfiles>
+	<description>Bitstreams for generating results for the icap-ctrl paper.</description>
+
+	<parameters datasize="32" compression="true" bitswapped="true"/>
+
+	<bitfile id="rle_config_mac" file="./sample_bitstream/rle_config_mac.bin" />
+	<bitfile id="rle_config_add" file="./sample_bitstream/rle_config_add.bin" />
+	<bitfile id="rle_config_blank" file="./sample_bitstream/rle_config_blank.bin" />
+	<bitfile id="xil_rle_config_mac" file="./sample_bitstream/xil_rle_config_mac.bin" />
+	<bitfile id="xil_rle_config_add" file="./sample_bitstream/xil_rle_config_add.bin" />
+	<bitfile id="xil_rle_config_blank" file="./sample_bitstream/xil_rle_config_blank.bin" />
+	<bitfile id="app_ex_adder" file="./sample_bitstream/app_ex_adder.bin" />
+	<bitfile id="app_ex_multip" file="./sample_bitstream/app_ex_multip.bin" />
+	
+</bitfiles>
