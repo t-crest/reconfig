@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bitfiles>
+	<description>Description to be printed out!</description>
+
+	<parameters datasize="32" compression="false" bitswapped="true"/>
+
+	<bitfile id="wire" file="./sample_bitstream/samplewire.bin" />
+	<bitfile id="not_wire" file="./sample_bitstream/not_wire.bin" />
+	<bitfile id="blank" file="./sample_bitstream/blank.bin" />
+	
+	<!-- <bitfile id="arrayname1" file="numbers.bin" /> -->
+	<!-- <bitfile id="arrayname2" file="numbers.bin" /> -->
+	<!-- <bitfile id="arrayname3" file="numbers.bin" /> -->
+
+</bitfiles>
+
