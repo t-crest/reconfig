@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="lin64" product="ISE" version="14.7">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="NgdBuild" timeStamp="Tue Aug 30 16:38:33 2016">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
+          <item stringID="value" value="2100@localhost:2200@localhost"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="/home/lpez/.xilinx/14.7/ISE_DS/ISE//bin/lin64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/thinlinc/bin:/home/lpez/.xilinx/14.7/ISE_DS/common/bin/lin64:/home/lpez/.xilinx/14.7/ISE_DS/EDK/bin/lin64:/home/lpez/.xilinx/14.7/ISE_DS/PlanAhead/bin:/home/lpez/.xilinx/14.7/ISE_DS/ISE/bin/lin64:/opt/modelsim/modeltech/bin:/home/lpez/.altera/13.0sp1/quartus/bin:/home/lpez/t-crest/local/bin:/home/lpez/android-studio/bin/"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="/home/lpez/.xilinx/14.7/ISE_DS/ISE/"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/home/lpez/.xilinx/14.7/ISE_DS/ISE//lib/lin64"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Ubuntu"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 14.04.4 LTS"/>
+      </item>
+      <item stringID="User_EnvHost" value="comp-nblpez"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz"/>
+          <item stringID="speed" value="800.000 MHz"/>
+        </row>
+      </table>
+    </section>
+    <task stringID="NGDBUILD_OPTION_SUMMARY">
+      <section stringID="NGDBUILD_OPTION_SUMMARY">
+        <item DEFAULT="None" label="-intstyle" stringID="NGDBUILD_intstyle" value="ise"/>
+        <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
+        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc6vlx240t-ff1156-1"/>
+      </section>
+    </task>
+    <task stringID="NGDBUILD_REPORT">
+      <section stringID="NGDBUILD_DESIGN_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="0"/>
+      </section>
+      <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="24"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="60"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="43"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="23"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="118"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="26"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="28"/>
+      </section>
+      <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="24"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="60"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="43"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="23"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="118"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="26"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="28"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
+        <section stringID="NGDBUILD_CORE_INSTANCES"/>
+      </section>
+    </task>
+  </application>
+
+</document>

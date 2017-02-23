@@ -1,0 +1,4 @@
+vhdl work "../../icap_ctrl/ocp.vhd"
+vhdl work "../../icap_ctrl/icap_ctrl_defs.vhd"
+vhdl work "../../icap_ctrl/icap_ctrl_config.vhd"
+vhdl work "../../icap_ctrl/icap_ctrl.vhd"

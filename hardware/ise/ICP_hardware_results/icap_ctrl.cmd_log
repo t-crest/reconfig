@@ -1,0 +1,30 @@
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx240t-ff1156-1 icap_ctrl.ngc icap_ctrl.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o icap_ctrl_map.ncd icap_ctrl.ngd icap_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off icap_ctrl_map.ncd icap_ctrl.ncd icap_ctrl.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml icap_ctrl.twx icap_ctrl.ncd -o icap_ctrl.twr icap_ctrl.pcf 
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -u -lc off -power off -o icap_ctrl_map.ncd icap_ctrl.ngd icap_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off icap_ctrl_map.ncd icap_ctrl.ncd icap_ctrl.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml icap_ctrl.twx icap_ctrl.ncd -o icap_ctrl.twr icap_ctrl.pcf 
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx240t-ff1156-1 icap_ctrl.ngc icap_ctrl.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -u -lc off -power off -o icap_ctrl_map.ncd icap_ctrl.ngd icap_ctrl.pcf 
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx240t-ff1156-1 icap_ctrl.ngc icap_ctrl.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -u -lc off -power off -o icap_ctrl_map.ncd icap_ctrl.ngd icap_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off icap_ctrl_map.ncd icap_ctrl.ncd icap_ctrl.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml icap_ctrl.twx icap_ctrl.ncd -o icap_ctrl.twr icap_ctrl.pcf 
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx240t-ff1156-1 icap_ctrl.ngc icap_ctrl.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -u -lc off -power off -o icap_ctrl_map.ncd icap_ctrl.ngd icap_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off icap_ctrl_map.ncd icap_ctrl.ncd icap_ctrl.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml icap_ctrl.twx icap_ctrl.ncd -o icap_ctrl.twr icap_ctrl.pcf 
+xst -intstyle ise -ifn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.xst" -ofn "/home/lpez/t-crest/reconfig/hardware/ise/ICP_hardware_results/icap_ctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx240t-ff1156-1 icap_ctrl.ngc icap_ctrl.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -u -lc off -power off -o icap_ctrl_map.ncd icap_ctrl.ngd icap_ctrl.pcf 
+par -w -intstyle ise -ol high -mt off icap_ctrl_map.ncd icap_ctrl.ncd icap_ctrl.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml icap_ctrl.twx icap_ctrl.ncd -o icap_ctrl.twr icap_ctrl.pcf 

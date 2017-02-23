@@ -1,0 +1,313 @@
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+comp-nblpez::  Tue Aug 30 16:39:11 2016
+
+par -w -intstyle ise -ol high -mt off icap_ctrl_map.ncd icap_ctrl.ncd
+icap_ctrl.pcf 
+
+
+Constraints file: icap_ctrl.pcf.
+Loading device for application Rf_Device from file '6vlx240t.nph' in environment /home/lpez/.xilinx/14.7/ISE_DS/ISE/.
+   "icap_ctrl" is an NCD, version 3.2, device xc6vlx240t, package ff1156, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.17 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                    84 out of 301,440    1%
+    Number used as Flip Flops:                  84
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        174 out of 150,720    1%
+    Number used as logic:                      174 out of 150,720    1%
+      Number using O6 output only:             143
+      Number using O5 output only:               2
+      Number using O5 and O6:                   29
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  58,400    0%
+    Number used exclusively as route-thrus:      0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    72 out of  37,680    1%
+  Number of LUT Flip Flop pairs used:          194
+    Number with an unused Flip Flop:           111 out of     194   57%
+    Number with an unused LUT:                  20 out of     194   10%
+    Number of fully used LUT-FF pairs:          63 out of     194   32%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of 301,440    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                         0 out of     600    0%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     416    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     832    0%
+  Number of BUFG/BUFGCTRLs:                      0 out of      32    0%
+  Number of ILOGICE1/ISERDESE1s:                 0 out of     720    0%
+  Number of OLOGICE1/OSERDESE1s:                 0 out of     720    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     144    0%
+  Number of BUFIODQSs:                           0 out of      72    0%
+  Number of BUFRs:                               0 out of      36    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     768    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              0 out of      20    0%
+  Number of IBUFDS_GTXE1s:                       0 out of      12    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of      18    0%
+  Number of IODELAYE1s:                          0 out of     720    0%
+  Number of MMCM_ADVs:                           0 out of      12    0%
+  Number of PCIE_2_0s:                           0 out of       2    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       0 out of       4    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 10 secs 
+Finished initial Timing Analysis.  REAL time: 10 secs 
+
+WARNING:Par:289 - The signal config_m_MCmd<2> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MCmd<1> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MCmd<0> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MAddr<4> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MAddr<3> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MAddr<2> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<31> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<30> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<29> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<28> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<27> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<26> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<25> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<24> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<23> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<22> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<21> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<20> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<19> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<18> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<17> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<16> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<15> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<14> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<13> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<12> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<11> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<10> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<9> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<8> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<7> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<6> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<5> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<4> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<3> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<2> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<1> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal config_m_MData<0> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<31> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<30> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<29> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<28> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<27> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<26> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<25> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<24> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<23> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<22> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<21> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<20> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<19> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<18> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<17> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<16> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<15> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<14> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<13> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<12> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<11> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<10> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<9> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<8> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<7> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<6> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<5> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<4> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<3> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<2> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<1> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal ram_data_i<0> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal icap_O<7> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal icap_O<6> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal icap_O<5> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal icap_O<4> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal icap_CLK has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal reset has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal icap_BUSY has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SResp<0> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SData<20> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SData<19> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SData<18> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SData<17> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SData<16> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SData<2> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SData<1> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal config_s_SData<0> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<15> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<14> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<13> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<12> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<11> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<10> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<9> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<8> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<7> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<6> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<5> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<4> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<3> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_addr<2> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<31> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<30> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<29> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<28> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<27> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<26> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<25> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<24> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<23> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<22> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<21> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<20> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<19> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<18> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<17> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<16> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<15> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<14> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<13> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<12> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<11> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<10> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<9> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<8> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<7> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<6> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<5> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<4> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<3> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<2> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<1> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_I<0> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal ram_re has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_CE has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal icap_WRITE has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 6115 unrouted;      REAL time: 12 secs 
+
+Phase  2  : 5731 unrouted;      REAL time: 12 secs 
+
+Phase  3  : 177 unrouted;      REAL time: 26 secs 
+
+Phase  4  : 177 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Updating file: icap_ctrl.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+Total REAL time to Router completion: 31 secs 
+Total CPU time to Router completion: 31 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net ica | SETUP       |         N/A|     3.091ns|     N/A|           0
+  p_CLK                                     | HOLD        |     0.119ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 58 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+WARNING:Par:284 - There are 77 sourceless signals in this design. This design will not pass the DRC check run by Bitgen.
+
+Total REAL time to PAR completion: 35 secs 
+Total CPU time to PAR completion: 35 secs 
+
+Peak Memory Usage:  1049 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 139
+Number of info messages: 2
+
+Writing design to file icap_ctrl.ncd
+
+
+
+PAR done!
