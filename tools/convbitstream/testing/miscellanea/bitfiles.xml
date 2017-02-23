@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bitfiles>
+	<description>Three bitfiles to test the application.</description>
+
+	<parameters datasize="32" compression="true" bitswapped="true"/>
+
+	<bitfile id="id0" file="./sample_bitstream/numbers.bin" />
+	<bitfile id="id1" file="./sample_bitstream/real1.bin" />
+	<bitfile id="id2" file="./sample_bitstream/real2.bin" />
+	
+	<!-- <bitfile id="arrayname1" file="numbers.bin" /> -->
+	<!-- <bitfile id="arrayname2" file="numbers.bin" /> -->
+	<!-- <bitfile id="arrayname3" file="numbers.bin" /> -->
+
+</bitfiles>
+
