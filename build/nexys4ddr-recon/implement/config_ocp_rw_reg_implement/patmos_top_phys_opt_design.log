@@ -1,0 +1,20 @@
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8347 ; free virtual = 19795
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+Phase 1 Physical Synthesis Initialization | Checksum: 17c6fe507
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8347 ; free virtual = 19795
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.500 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+Ending Physical Synthesis Task | Checksum: 144b9d054
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8347 ; free virtual = 19795
+INFO: [Common 17-83] Releasing license: Implementation
+1243 Infos, 592 Warnings, 5 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully

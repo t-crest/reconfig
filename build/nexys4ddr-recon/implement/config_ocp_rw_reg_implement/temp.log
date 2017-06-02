@@ -1,0 +1,6 @@
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.93 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8333 ; free virtual = 19823
+INFO: [Common 17-1381] The checkpoint '/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/implement/config_ocp_rw_reg_implement/patmos_top_static.dcp' has been generated.

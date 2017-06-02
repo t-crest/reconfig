@@ -1,0 +1,62 @@
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.44 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8387 ; free virtual = 19826
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: 318fee44e
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 318fee44e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8387 ; free virtual = 19826
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 2 cells.
+Phase 2 Constant propagation | Checksum: 1eeaf0c1d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8387 ; free virtual = 19825
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 0 unconnected nets.
+INFO: [Opt 31-11] Eliminated 1 unconnected cells.
+Phase 3 Sweep | Checksum: 25cfce233
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8386 ; free virtual = 19825
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-12] Eliminated 0 unconnected nets.
+INFO: [Opt 31-11] Eliminated 18 unconnected cells.
+Phase 4 BUFG optimization | Checksum: 2595a3700
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8386 ; free virtual = 19825
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8386 ; free virtual = 19825
+Ending Logic Optimization Task | Checksum: 25cfce233
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8386 ; free virtual = 19825
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-232] Skipping BRAM gating because all BRAMs are in high frequency (i.e. period < 3.12 ns) clock domains.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 81 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+Ending Power Optimization Task | Checksum: 25cfce233
+
+Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.48 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8386 ; free virtual = 19825
+INFO: [Common 17-83] Releasing license: Implementation
+1294 Infos, 593 Warnings, 6 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8386 ; free virtual = 19825

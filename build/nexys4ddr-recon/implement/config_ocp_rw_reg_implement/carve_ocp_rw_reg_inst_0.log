@@ -1,0 +1,1 @@
+INFO: [Designutils 20-2277] Running 'update_design -black_box' on cell ocp_rw_reg_inst_0. The cell has HD.RECONFIGURABLE property set to true and it will be turned into a black-box cell after this command.

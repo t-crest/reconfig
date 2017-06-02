@@ -1,0 +1,11 @@
+puts "#HD: Running synthesis for block ocp_rw_reg"
+puts "	#HD: Setting Tcl Params:"
+set_param hd.visual 0
+create_project -in_memory -part xc7a100tcsg324-1
+add_files ./sources/hdl/ocp_rw_reg.vhd
+set_property LIBRARY work [get_files ./sources/hdl/ocp_rw_reg.vhd]
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top ocp_rw_reg -part xc7a100tcsg324-1
+write_checkpoint -force ./synth/ocp_rw_reg/ocp_rw_reg_synth.dcp
+report_utilization -file ./synth/ocp_rw_reg/ocp_rw_reg_utilization_synth.rpt
+close_project
+puts "#HD: Synthesis of module ocp_rw_reg complete\n"

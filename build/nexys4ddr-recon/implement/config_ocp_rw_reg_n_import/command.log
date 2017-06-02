@@ -1,0 +1,29 @@
+puts "#HD: Running implementation config_ocp_rw_reg_n_import"
+puts "	#HD: Setting Tcl Params:"
+set_param hd.visual 0
+create_project -in_memory -part xc7a100tcsg324-1
+add_files ./checkpoint/patmos_top_static.dcp
+link_design -mode default -part xc7a100tcsg324-1 -top patmos_top
+read_checkpoint -cell ocp_rw_reg_inst_0 ./synth/ocp_rw_reg_n/ocp_rw_reg_synth.dcp -strict
+write_checkpoint -force ./implement/config_ocp_rw_reg_n_import/patmos_top_link_design.dcp
+opt_design
+puts "	#HD: Completed: opt_design"
+write_checkpoint -force ./implement/config_ocp_rw_reg_n_import/patmos_top_opt_design.dcp
+place_design
+puts "	#HD: Completed: place_design"
+write_checkpoint -force ./implement/config_ocp_rw_reg_n_import/patmos_top_place_design.dcp
+phys_opt_design
+puts "	#HD: Completed: phys_opt_design"
+write_checkpoint -force ./implement/config_ocp_rw_reg_n_import/patmos_top_phys_opt_design.dcp
+route_design
+puts "	#HD: Completed: route_design"
+write_checkpoint -force ./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.dcp
+report_utilization -file ./implement/config_ocp_rw_reg_n_import/reports/patmos_top_utilization_route_design.rpt
+report_route_status -file ./implement/config_ocp_rw_reg_n_import/reports/patmos_top_route_status.rpt
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -file ./implement/config_ocp_rw_reg_n_import/reports/patmos_top_timing_summary.rpt
+report_drc -ruledeck bitstream_checks -name patmos_top -file ./implement/config_ocp_rw_reg_n_import/reports/patmos_top_drc_bitstream_checks.rpt
+debug::report_design_status
+write_checkpoint -force -cell ocp_rw_reg_inst_0 ./implement/config_ocp_rw_reg_n_import/pblock_ocp_rw_reg_ocp_rw_reg_n_route_design.dcp
+file copy -force ./implement/config_ocp_rw_reg_n_import/pblock_ocp_rw_reg_ocp_rw_reg_n_route_design.dcp ./checkpoint
+close_project
+puts "#HD: Implementation config_ocp_rw_reg_n_import complete\n"

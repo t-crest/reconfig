@@ -1,0 +1,25 @@
+	#HD: Parsing log file "pr_verify_results.log":
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+
+
+	#HD: Parsing log file "./bitstreams/open_checkpoint_config_ocp_rw_reg_implement.log":
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+
+
+	#HD: Parsing log file "./bitstreams/config_ocp_rw_reg_implement.log":
+
+
+	#HD: Parsing log file "./bitstreams/temp.log":
+
+
+	#HD: Parsing log file "./bitstreams/open_checkpoint_config_ocp_rw_reg_n_import.log":
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+
+
+	#HD: Parsing log file "./bitstreams/config_ocp_rw_reg_n_import.log":
+
+
+	#HD: Parsing log file "./bitstreams/temp.log":
+
+

@@ -1,0 +1,106 @@
+puts "#HD: Running synthesis for block Static"
+puts "	#HD: Setting Tcl Params:"
+set_param hd.visual 0
+create_project -in_memory -part xc7a100tcsg324-1
+add_files ./sources/hdl/Patmos.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/clocking/mig_7series_v4_0_clk_ibuf.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/clocking/mig_7series_v4_0_infrastructure.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/clocking/mig_7series_v4_0_iodelay_ctrl.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/clocking/mig_7series_v4_0_tempmon.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_arb_mux.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_arb_row_col.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_arb_select.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_bank_cntrl.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_bank_common.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_bank_compare.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_bank_mach.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_bank_queue.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_bank_state.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_col_mach.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_mc.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_rank_cntrl.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_rank_common.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_rank_mach.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/controller/mig_7series_v4_0_round_robin_arb.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ecc/mig_7series_v4_0_ecc_buf.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ecc/mig_7series_v4_0_ecc_dec_fix.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ecc/mig_7series_v4_0_ecc_gen.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ecc/mig_7series_v4_0_ecc_merge_enc.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ecc/mig_7series_v4_0_fi_xor.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ip_top/mig_7series_v4_0_mem_intfc.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ip_top/mig_7series_v4_0_memc_ui_top_std.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_byte_group_io.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_byte_lane.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_tempmon.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_calib_top.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_if_post_fifo.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_mc_phy.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_mc_phy_wrapper.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_of_pre_fifo.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_4lanes.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_init.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_dqs_found_cal.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_dqs_found_cal_hr.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_oclkdelay_cal.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_prbs_rdlvl.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_rdlvl.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_top.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_wrcal.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_wrlvl_off_delay.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_prbs_gen.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_ck_addr_cmd_delay.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_wrlvl.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_ocd_lim.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_poc_top.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_ocd_mux.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_ocd_data.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_ocd_samp.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_ocd_edge.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_ocd_cntlr.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_phy_ocd_po_cntlr.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_poc_pd.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_poc_tap_base.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_poc_meta.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_poc_edge_store.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_poc_cc.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ui/mig_7series_v4_0_ui_cmd.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ui/mig_7series_v4_0_ui_rd_data.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ui/mig_7series_v4_0_ui_top.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ui/mig_7series_v4_0_ui_wr_data.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ddr2_ctrl_mig.v
+add_files ./sources/hdl/ddr2_ctrl/rtl/ddr2_ctrl.v
+add_files ./sources/hdl/clk_manager/clk_manager.v
+add_files ./sources/hdl/clk_manager/clk_manager_clk_wiz.v
+add_files ./sources/hdl/ocp.vhd
+set_property LIBRARY work [get_files ./sources/hdl/ocp.vhd]
+add_files ./sources/hdl/ocp_burst_to_ddr2_ctrl.vhd
+set_property LIBRARY work [get_files ./sources/hdl/ocp_burst_to_ddr2_ctrl.vhd]
+add_files ./sources/hdl/nexys4ddr_io.vhd
+set_property LIBRARY work [get_files ./sources/hdl/nexys4ddr_io.vhd]
+add_files ./sources/hdl/icap_ctrl_config.vhd
+set_property LIBRARY work [get_files ./sources/hdl/icap_ctrl_config.vhd]
+add_files ./sources/hdl/icap_ctrl.vhd
+set_property LIBRARY work [get_files ./sources/hdl/icap_ctrl.vhd]
+add_files ./sources/hdl/ocp_to_bram.vhd
+set_property LIBRARY work [get_files ./sources/hdl/ocp_to_bram.vhd]
+add_files ./sources/hdl/recon_spm.vhd
+set_property LIBRARY work [get_files ./sources/hdl/recon_spm.vhd]
+add_files ./sources/hdl/icap_ctrl_defs.vhd
+set_property LIBRARY work [get_files ./sources/hdl/icap_ctrl_defs.vhd]
+add_files ./sources/hdl/tdp_sc_bram.vhd
+set_property LIBRARY work [get_files ./sources/hdl/tdp_sc_bram.vhd]
+add_files ./sources/hdl/patmos_nexys4ddr-recon.vhdl
+set_property LIBRARY work [get_files ./sources/hdl/patmos_nexys4ddr-recon.vhdl]
+add_files ./sources/xdc/nexys4ddr.xdc
+set_property USED_IN {synthesis} [get_files ./sources/xdc/nexys4ddr.xdc]
+add_files ./sources/hdl/clk_manager/clk_manager.xdc
+set_property USED_IN {synthesis} [get_files ./sources/hdl/clk_manager/clk_manager.xdc]
+add_files ./sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc
+set_property USED_IN {synthesis} [get_files ./sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc]
+add_files ./sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc
+set_property USED_IN {synthesis out_of_context} [get_files ./sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc]
+synth_design -mode default -flatten_hierarchy rebuilt -top patmos_top -part xc7a100tcsg324-1
+write_checkpoint -force ./synth/Static/patmos_top_synth.dcp
+report_utilization -file ./synth/Static/patmos_top_utilization_synth.rpt
+close_project
+puts "#HD: Synthesis of module Static complete\n"

@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Fri Feb 24 15:29:25 2017
+# Process ID: 9241
+# Current directory: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon
+# Command line: vivado -mode tcl
+# Log file: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon/vivado.log
+# Journal file: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon/vivado.jou
+#-----------------------------------------------------------
+source design_complete.tcl -notrace
+start_gui 
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROGRAM.FILE {/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/bitstreams/config_ocp_rw_reg_implement.bit} [lindex [get_hw_devices xc7a100t_0] 0]
+program_hw_devices [lindex [get_hw_devices xc7a100t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

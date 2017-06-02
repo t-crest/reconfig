@@ -1,0 +1,70 @@
+Command: pr_verify -full_check -initial ./implement/config_ocp_rw_reg_implement/patmos_top_route_design.dcp -additional ./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 748 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+New: create_clock -period 10.000 [get_ports clk_in], [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
+Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/xdc/nexys4ddr.xdc:8]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1824.367 ; gain = 519.457 ; free physical = 8494 ; free virtual = 20266
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top_late.xdc]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.71 . Memory (MB): peak = 1848.039 ; gain = 19.668 ; free physical = 8482 ; free virtual = 20242
+Restored from archive | CPU: 0.700000 secs | Memory: 20.425812 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.71 . Memory (MB): peak = 1848.039 ; gain = 19.668 ; free physical = 8482 ; free virtual = 20242
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
+INFO: [Vivado 12-3501] pr_verify ./implement/config_ocp_rw_reg_implement/patmos_top_route_design.dcp ./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 748 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+New: create_clock -period 10.000 [get_ports clk_in], [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
+Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/xdc/nexys4ddr.xdc:8]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top_late.xdc]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp_2/patmos_top_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.75 . Memory (MB): peak = 2153.758 ; gain = 19.668 ; free physical = 8279 ; free virtual = 20039
+Restored from archive | CPU: 0.740000 secs | Memory: 20.509979 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.75 . Memory (MB): peak = 2153.758 ; gain = 19.668 ; free physical = 8279 ; free virtual = 20039
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: ./implement/config_ocp_rw_reg_implement/patmos_top_route_design.dcp
+  Number of reconfigurable modules compared = 1
+  Number of partition pins compared         = 88
+  Number of static tiles compared           = 204
+  Number of static sites compared           = 3652
+  Number of static cells compared           = 20151
+  Number of static routed nodes compared    = 291296
+  Number of static routed pips compared     = 272535
+
+DCP2: ./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.dcp
+  Number of reconfigurable modules compared = 1
+  Number of partition pins compared         = 88
+  Number of static tiles compared           = 204
+  Number of static sites compared           = 3652
+  Number of static cells compared           = 20151
+  Number of static routed nodes compared    = 291296
+  Number of static routed pips compared     = 272535
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_ocp_rw_reg_implement/patmos_top_route_design.dcp and ./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.dcp are compatible
+pr_verify: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 2240.758 ; gain = 1240.828 ; free physical = 8253 ; free virtual = 19953

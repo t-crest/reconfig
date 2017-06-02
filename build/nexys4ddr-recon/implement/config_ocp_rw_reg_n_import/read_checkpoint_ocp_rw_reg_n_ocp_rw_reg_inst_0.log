@@ -1,0 +1,1 @@
+Command: read_checkpoint -cell ocp_rw_reg_inst_0 ./synth/ocp_rw_reg_n/ocp_rw_reg_synth.dcp -strict

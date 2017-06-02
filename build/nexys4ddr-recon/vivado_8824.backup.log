@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Fri Feb 24 15:03:54 2017
+# Process ID: 8824
+# Current directory: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon
+# Command line: vivado
+# Log file: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon/vivado.log
+# Journal file: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/lpez/t-crest/patmos/hardware/vivado/nexys4ddr-recon.bak/nexys4ddr.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '/home/lpez/t-crest/patmos/hardware/vivado/nexys4ddr-recon.bak/genesys2.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/lpez/Xilinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 5957.430 ; gain = 153.836 ; free physical = 9105 ; free virtual = 20731
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 24 15:06:58 2017...

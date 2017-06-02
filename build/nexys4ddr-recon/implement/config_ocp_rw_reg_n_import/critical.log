@@ -1,0 +1,55 @@
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/create_project.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/patmos_top_link_design.log":
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/read_checkpoint_ocp_rw_reg_n_ocp_rw_reg_inst_0.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/patmos_top_opt_design.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/patmos_top_place_design.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/patmos_top_phys_opt_design.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/reports/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/reports/patmos_top_design_status.rpt":
+
+
+	#HD: Parsing log file "./implement/config_ocp_rw_reg_n_import/temp.log":
+
+

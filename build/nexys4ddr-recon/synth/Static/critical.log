@@ -1,0 +1,14 @@
+	#HD: Parsing log file "./synth/Static/create_project.log":
+
+
+	#HD: Parsing log file "./synth/Static/patmos_top_synth_design.rds":
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+	CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ocp_rw_reg' instantiated as 'ocp_rw_reg_inst_0' [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/patmos_nexys4ddr-recon.vhdl:591]
+
+
+	#HD: Parsing log file "./synth/Static/temp.log":
+
+
+	#HD: Parsing log file "./synth/Static/temp.log":
+
+

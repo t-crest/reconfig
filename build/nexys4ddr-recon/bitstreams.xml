@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bitfiles>
+	<description>Bitstreams for generating results for the icap-ctrl paper.</description>
+
+	<parameters datasize="32" compression="true" bitswapped="true"/>
+
+	<bitfile id="config_ocp_rw_reg" file="/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/bitstreams/config_ocp_rw_reg_implement_pblock_ocp_rw_reg_partial.bin" />
+	<bitfile id="config_ocp_rw_reg_n" file="/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/bitstreams/config_ocp_rw_reg_n_import_pblock_ocp_rw_reg_partial.bin" />
+	
+</bitfiles>

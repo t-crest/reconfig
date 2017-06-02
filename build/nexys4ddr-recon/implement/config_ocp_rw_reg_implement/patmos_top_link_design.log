@@ -1,0 +1,33 @@
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 748 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/xdc/nexys4ddr.xdc]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/xdc/nexys4ddr.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/xdc/pblocks.xdc]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/xdc/pblocks.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+New: create_clock -period 10.000 [get_ports clk_in], [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
+Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/xdc/nexys4ddr.xdc:8]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hier -filter {NAME =~ */u_iodelay_ctrl/sys_rst}'. [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc:330]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-through [get_pins -hier -filter {NAME =~ */u_iodelay_ctrl/sys_rst}]'. [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc:330]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'ocp_rw_reg' instantiated as 'ocp_rw_reg_inst_0' [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/patmos_nexys4ddr-recon.vhdl:591]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 177 instances were transformed.
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 126 instances
+  RAM32X1S => RAM32X1S (RAMS32): 32 instances
+

@@ -1,0 +1,3 @@
+WARNING: [Coretcl 2-1291] -name option used when not in GUI mode. A DRC tab will not be created, but the results will be stored for use with 'get_drc_violations -name patmos_top'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/lpez/t-crest/reconfig/build/nexys4ddr-recon/implement/config_ocp_rw_reg_implement/reports/patmos_top_drc_bitstream_checks.rpt.

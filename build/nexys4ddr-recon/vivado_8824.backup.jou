@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Fri Feb 24 15:03:54 2017
+# Process ID: 8824
+# Current directory: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon
+# Command line: vivado
+# Log file: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon/vivado.log
+# Journal file: /home/lpez/t-crest/reconfig/build/nexys4ddr-recon/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/lpez/t-crest/patmos/hardware/vivado/nexys4ddr-recon.bak/nexys4ddr.xpr

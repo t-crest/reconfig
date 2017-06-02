@@ -1,0 +1,153 @@
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 24286367 ConstDB: 0 ShapeSum: fb283e21 RouteDB: c3262b75
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: e7b12393
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8228 ; free virtual = 19708
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 209a5814e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8230 ; free virtual = 19710
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 209a5814e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8233 ; free virtual = 19713
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 209a5814e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8233 ; free virtual = 19713
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 220ca04b6
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:23 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8228 ; free virtual = 19713
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.124  | TNS=0.000  | WHS=-0.220 | THS=-111.180|
+
+Phase 2 Router Initialization | Checksum: 2f709c6bf
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:24 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8227 ; free virtual = 19715
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 2b8f72e96
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:25 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8227 ; free virtual = 19715
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 3b6027416
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:26 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8227 ; free virtual = 19713
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.124  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 3194ea0de
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:27 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8227 ; free virtual = 19714
+Phase 4 Rip-up And Reroute | Checksum: 3194ea0de
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:27 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8227 ; free virtual = 19714
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 3d5bd97a9
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8223 ; free virtual = 19719
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.124  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 3d5bd97a9
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8223 ; free virtual = 19719
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 3d5bd97a9
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8223 ; free virtual = 19719
+Phase 5 Delay and Skew Optimization | Checksum: 3d5bd97a9
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8223 ; free virtual = 19719
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 3cf82d295
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:30 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8215 ; free virtual = 19718
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.124  | TNS=0.000  | WHS=0.015  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 2fc45c825
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:30 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8215 ; free virtual = 19719
+Phase 6 Post Hold Fix | Checksum: 2fc45c825
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:30 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8215 ; free virtual = 19719
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0153632 %
+  Global Horizontal Routing Utilization  = 0.00532822 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 31eec38fd
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:30 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8215 ; free virtual = 19719
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 31eec38fd
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:30 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8215 ; free virtual = 19719
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 239ca6d98
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:32 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8214 ; free virtual = 19717
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.124  | TNS=0.000  | WHS=0.015  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 239ca6d98
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:32 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8214 ; free virtual = 19717
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:35 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8207 ; free virtual = 19720
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+1331 Infos, 635 Warnings, 6 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:10 ; elapsed = 00:00:37 . Memory (MB): peak = 2823.809 ; gain = 0.000 ; free physical = 8207 ; free virtual = 19720

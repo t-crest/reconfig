@@ -1,0 +1,14 @@
+puts "#HD: Running pr_verify between initial config config_ocp_rw_reg_implement and subsequent configurations config_ocp_rw_reg_n_import"
+pr_verify -full_check -initial ./implement/config_ocp_rw_reg_implement/patmos_top_route_design.dcp -additional "./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.dcp"
+puts "	#HD: Setting Tcl Params:"
+set_param hd.visual 0
+puts "	#HD: Running write_bitstream on config_ocp_rw_reg_implement"
+open_checkpoint ./implement/config_ocp_rw_reg_implement/patmos_top_route_design.dcp
+set_property BITSTREAM.GENERAL.COMPRESS        TRUE [current_design]
+write_bitstream -force -bin_file ./bitstreams/config_ocp_rw_reg_implement
+close_project
+puts "	#HD: Running write_bitstream on config_ocp_rw_reg_n_import"
+open_checkpoint ./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.dcp
+set_property BITSTREAM.GENERAL.COMPRESS        TRUE [current_design]
+write_bitstream -force -bin_file ./bitstreams/config_ocp_rw_reg_n_import
+close_project

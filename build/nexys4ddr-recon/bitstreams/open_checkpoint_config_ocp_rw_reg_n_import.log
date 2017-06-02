@@ -1,0 +1,36 @@
+Command: open_checkpoint ./implement/config_ocp_rw_reg_n_import/patmos_top_route_design.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2323.688 ; gain = 0.000 ; free physical = 8034 ; free virtual = 19752
+INFO: [Netlist 29-17] Analyzing 748 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp/patmos_top_early.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp/patmos_top.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+New: create_clock -period 10.000 [get_ports clk_in], [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
+Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/xdc/nexys4ddr.xdc:8]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp/patmos_top.xdc]
+Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp/patmos_top_late.xdc]
+Finished Parsing XDC File [/home/lpez/t-crest/reconfig/build/nexys4ddr-recon/.Xil/Vivado-10847-comp-nblpez/dcp/patmos_top_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.71 . Memory (MB): peak = 2323.688 ; gain = 0.000 ; free physical = 8004 ; free virtual = 19751
+Restored from archive | CPU: 0.700000 secs | Memory: 20.475716 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.71 . Memory (MB): peak = 2323.688 ; gain = 0.000 ; free physical = 8004 ; free virtual = 19751
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 177 instances were transformed.
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, OBUFTDS, OBUFTDS, INV): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (OBUFDS, OBUFDS, INV): 1 instances
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 126 instances
+  RAM32X1S => RAM32X1S (RAMS32): 32 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
