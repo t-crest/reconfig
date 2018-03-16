@@ -1,7 +1,7 @@
 #!/bin/bash          
 
 #
-# This bash script extracts the viviado tcl scripts.
+# This bash script extracts the viviado tcl scripts, you need the password to do this.
 # Author: Luca Pezzarossa (lpez@dtu.dk)
 #
 

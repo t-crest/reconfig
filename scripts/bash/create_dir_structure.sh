@@ -1,7 +1,7 @@
 #!/bin/bash          
 
 #
-# This bash script just generates the folder structure for a reconfig project.
+# This bash script generates the folder structure for a reconfig project.
 # Author: Luca Pezzarossa (lpez@dtu.dk)
 #
 

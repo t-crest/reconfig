@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bitfiles>
+	<description>Bitstreams for generating results for the icap-ctrl paper.</description>
+
+	<parameters datasize="32" compression="true" bitswapped="true"/>
+
+	<bitfile id="config_filter_pass" file="/home/lpez/t-crest/reconfig/build/genesys2-audio-recon/bitstreams/config_filter_rr_pass_implement_pblock_filter_rr_inst_0_partial.bin" />
+	<bitfile id="config_filter_lp" file="/home/lpez/t-crest/reconfig/build/genesys2-audio-recon/bitstreams/config_filter_rr_lp_import_pblock_filter_rr_inst_0_partial.bin" />
+	<bitfile id="config_filter_hp" file="/home/lpez/t-crest/reconfig/build/genesys2-audio-recon/bitstreams/config_filter_rr_hp_import_pblock_filter_rr_inst_0_partial.bin" />
+	<bitfile id="config_filter_bp" file="/home/lpez/t-crest/reconfig/build/genesys2-audio-recon/bitstreams/config_filter_rr_bp_import_pblock_filter_rr_inst_0_partial.bin" />
+	
+</bitfiles>
